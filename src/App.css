@@ -1,0 +1,161 @@
+*,
+p,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes moveInLeft {
+
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    opacity: .8;
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    opacity: .8;
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.section-editorial {
+  color: #fff;
+  text-align: left;
+  background-color: #000;
+}
+
+
+.section-editorial {
+  padding: 20px 0;
+}
+
+
+.row {
+  display: flex;
+  margin: auto;
+}
+
+.section-editorial__text-left .row {
+  flex-direction: row-reverse;
+}
+
+
+.editorial__header {
+  margin-bottom: 20px;
+}
+
+.editorial__paragraph {
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.editorial--image-panel {
+  position: relative;
+  margin: 40px;
+  min-height: 360px;
+  width: 50%;
+  text-align: center;
+}
+
+.details-panel {
+  padding: 40px;
+  padding-right: 0;
+  align-self: center;
+  width: 60%;
+}
+
+
+.section-editorial__text-left .details-panel {
+  padding-left: 0;
+}
+
+.section-editorial img {
+  animation: moveDown;
+  animation-duration: 1s;
+  width: 100%;
+  max-width: 300px;
+  max-height: 400px;
+}
+
+@media (max-width: 768px) {
+  .section-editorial__text-left .row {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .details-panel {
+    margin-top: 30px;
+    padding: 0;
+  }
+
+  .section-editorial--image-panel {
+    margin: 0;
+  }
+
+
+  .editorial--image-panel {
+    position: relative;
+    margin: 0;
+    min-height: auto;
+    width: 80%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 769px) {
+
+  .row{
+    padding: 0 100px;
+  }
+  .section-editorial__inner-wrap {
+    width: 50%;
+  }
+}
